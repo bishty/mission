@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scheme</title>
+  </head>
+  <body>
+     <h1>Chain Marketing Organization</h1>
+    <center> <button  onclick="scheme()">Press to SEE the Result</button><center>
+     <p id="demo"></p>
+    <script>
+         function scheme(){
+           const amount=5000;
+           let parent =amount*0.1;
+           let noconnection= (5*amount)/100;
+           
+            var x=prompt("enter parent name");
+            if (x === null) {
+              alert("Invalide response");
+                }
+                else{
+              var y=prompt("Do you have a childer ? Y OR N");
+             
+               
+              if(y=='Y' || y=='y')
+            {
+                  document.write("<h1>total commision</h1>")
+                  var count=prompt("Number of children");
+                  let r=window.prompt("enter a name of children");
+                  let arr=r.split(",");
+                  let totalmember=arr.length+1;
+                  console.log(totalmember);
+                  document.write(`${x}:: ${parent*count}INR`);
+                  document.write("<br>");
+                  document.write(`total member:${totalmember}`);
+                  document.write("<br>");
+                  document.write(` each childern got ${noconnection}`);
+                  document.write("<br>");
+                 
+                  for(i=0;i<arr.length;i++)
+                  {
+                    document.write(` ${arr[i]}=.${noconnection}INR`);
+                  }
+                  document.write("<br>");
+                  }   
+                 else 
+                  {
+                    document.write(` ${noconnection} INR`);
+            }
+            }
+          }
+    </script>
+  </body>
+</html>
